@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<upstream>
+		<maintainer>
+			<email>sergio.andreas.cn@gmail.com</email>
+			<name>Sergio Constantino</name>
+		</maintainer>
+		<remote-id type="github">k0rtuz/local-ebuild-repository</remote-id>
+	</upstream>
+</pkgmetadata>

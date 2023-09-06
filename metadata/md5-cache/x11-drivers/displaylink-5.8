@@ -1,0 +1,15 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=configure install postinst unpack
+DEPEND=app-admin/chrpath app-arch/unzip
+DESCRIPTION=DisplayLink USB Graphics Software
+EAPI=8
+HOMEPAGE=http://www.displaylink.com/downloads/ubuntu
+INHERIT=udev
+KEYWORDS=~amd64 ~x86
+LICENSE=DisplayLink-EULA
+RDEPEND=>=sys-devel/gcc-12.3.1 >=x11-drivers/evdi-1.14.1 virtual/libusb:1 >=x11-base/xorg-server-21.1.8 sys-auth/elogind virtual/udev
+RESTRICT=mirror bindist
+SLOT=0
+SRC_URI=https://www.synaptics.com/sites/default/files/exe_files/2023-08/DisplayLink%20USB%20Graphics%20Software%20for%20Ubuntu5.8-EXE.zip
+_eclasses_=toolchain-funcs	862d337d98edb576796827be2c6b11ca	multilib	c19072c3cd7ac5cb21de013f7e9832e0	udev	eec0bbab06977f1cfc5597269c1fa152
+_md5_=f86348065f3bdb6dc9cfd74c8377cec5
