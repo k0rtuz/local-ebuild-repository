@@ -19,22 +19,29 @@ RDEPEND="x11-libs/libdrm"
 DEPEND="${RDEPEND}
 	sys-kernel/linux-headers"
 
-MODULE_NAMES="evdi(video:${S}/module)"
-
 #CONFIG_CHECK="~FB_VIRTUAL ~!INTEL_IOMMU"
 CONFIG_CHECK="~FB_VIRTUAL ~I2C"
 
 pkg_setup() {
-	default
+	linux-mod-r1_pkg_setup
 }
 
 src_compile() {
+	local modlist=(
+		"evdi=video:module"
+	)
+	linux-mod-r1_src_compile
 	cd "${S}/library"
 	default
 	mv libevdi.so libevdi.so.0
 }
 
 src_install() {
+	linux-mod-r1_src_install
 	dolib.so library/libevdi.so.0
 	dosym libevdi.so.0 "/usr/$(get_libdir)/libevdi.so"
+}
+
+pkg_postinst() {
+	einfo "The EVDI library was successfully installed."
 }

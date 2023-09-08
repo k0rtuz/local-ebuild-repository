@@ -31,10 +31,6 @@ src_unpack() {
 	sh ./"${PN}-driver-${PV}.0-${PV_EXTRA}".run --noexec --target "${P}"
 }
 
-src_configure() {
-	econf --with-rulesdir="$(get_udevdir)"/rules.d
-}
-
 src_install() {
 	MY_UBUNTU_VERSION=1604
 	einfo "Using package for Ubuntu ${MY_UBUNTU_VERSION}"
@@ -63,7 +59,7 @@ src_install() {
 	newins "${FILESDIR}/elogind-hook" displaylink
 
 	dosym ../../../opt/displaylink/displaylink.sh /lib64/elogind/system-sleep/50-displaylink.sh
-	newinitd "${FILESDIR}/rc-displaylink-1.3" dlm
+	newinitd "${FILESDIR}/rc-displaylink" dlm
 }
 
 pkg_postinst() {
