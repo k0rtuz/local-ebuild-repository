@@ -13,7 +13,7 @@ LICENSE="DisplayLink-EULA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-PV_EXTRA="63.33"
+PV_EXTRA="24"
 
 RESTRICT="mirror bindist"
 
